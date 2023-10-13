@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const carro = {
+      nome: 'Bambobi',
+      velocidadeMax: '300 km/h',
+      rodado: 0,
+      andar: () => this.rodado += 1,
+      transformar: () => console.log('Eu sou bambobi'),
+      ligar: () => console.log('Vrummmm')
+    }
+    const bicicleta = {
+      nome: 'Do troca',
+      velocidadeMax: 'Depede da ladeira',
+      freio: 'Não tem',
+      andando: null,
+      peladar: () => andando = setInterval(() => console.log('andando'), 1000),
+      parar: () => clearInterval(this.andando),
+      freiar: () => console.log('Sem freio, só aventura')
+    }
+
+    const estudate = {
+      nota1: 10,
+      nota2: 5,
+      nota3: 8,
+      nota4: 7,
+      media: () => console.log((nota1+nota2+nota3+nota4)/4),
+      darPonto: (quant) => this.nota2 += quant,
+      tirarPonto: (quant) => this.nota2 -= quant,
+    }
+    const data = {
+      dia: 1,
+      mes: 3,
+      ano: 2500,
+      passarAno: () => this.ano += 1,
+      passarDia: () => this.dia += 1,
+      passarMes: () => this.mes += 1,
+      mostrarData: () => console.log(`${this.dia}/${this.mes}/${this.ano}`)
+    }
+
+    console.log(carro)
+    console.log(bicicleta)
+    console.log(estudate)
+    console.log(data)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
