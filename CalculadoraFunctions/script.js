@@ -76,7 +76,6 @@ ajustarFontVisor()
 window.addEventListener("resize", ajustarFontVisor)
 
 window.addEventListener("keydown", (event) => {
-  // if (event.key.startsWith('F') || event.key.startsWith('f') && event.key.length === 2) return event.preventDefault()
   if (/[0-9\+\-\*\/]/.test(event.key) && !event.key.toLocaleLowerCase().startsWith('f')) inserir(event.key)
   else if (event.key === '%') porcentagem()
   else if(event.key.toLocaleLowerCase === 'c') limpar()
