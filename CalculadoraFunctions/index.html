@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="calculadora-container grid-container">
+    <div class="calculadora-body grid-item grid">
+      <div id="visor" class="visor"></div>
+      <div class="buttons grid-buttons">
+        <button class="especial" type="button" onclick="limpar()">C</button>
+        <button class="especial" type="button" onclick="retirar()">←</button>
+        <button class="especial" type="button" onclick="porcentagem()">%</button>
+        <button class="especial" type="button" onclick="inserircalc('÷')">÷</button>
+        <button type="button" onclick="inserir('7')">7</button>
+        <button type="button" onclick="inserir('8')">8</button>
+        <button type="button" onclick="inserir('9')">9</button>
+        <button class="especial" type="button" onclick="inserircalc('x')">X</button>
+        <button type="button" onclick="inserir('4')">4</button>
+        <button type="button" onclick="inserir('5')">5</button>
+        <button type="button" onclick="inserir('6')">6</button>
+        <button class="especial" type="button" onclick="inserircalc('-')">-</button>
+        <button type="button" onclick="inserir('3')">3</button>
+        <button type="button" onclick="inserir('2')">2</button>
+        <button type="button" onclick="inserir('1')">1</button>
+        <button class="especial" type="button" onclick="inserircalc('+')">+</button>
+        <button type="button"></button>
+        <button type="button" onclick="inserir('0')">0</button>
+        <button class="especial" type="button" onclick="inserir('.')">.</button>
+        <button class="especial" type="button" onclick="calcular()">=</button>
+      </div>
+    </div>
+    <div class="historico-body grid-item">
+      <button type="button" id="visibleHistory" onclick="verHistorico()">></button>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <label>
+                  Histórico
+                </label>
+                <button type="button" onclick="limparHistorico()" title="Atalho (H)">X</button>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="historico">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
