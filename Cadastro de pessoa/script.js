@@ -21,4 +21,5 @@ document.getElementById('cadastrar').addEventListener('click', () => {
       <td class="text-center">${pessoa.diploma ? 'Tem' : 'Não tem' }</td>
     </tr>
   `
+  delete pessoa
 })
